@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/group1">
+        <item
+            android:id="@+id/report_menu"
+            android:icon="@android:drawable/ic_menu_report_image"
+            android:title="Reports" />
+        <item
+            android:id="@+id/customize_menu"
+            android:icon="@drawable/ic_customize_black_24dp"
+            android:title="Customize" />
+        <item
+            android:id="@+id/logout_menu"
+            android:icon="@drawable/ic_lock_outline_black_24dp"
+            android:title="Logout" />
+    </group>
+    <group android:id="@+id/group2">
+        <item
+            android:id="@+id/settings_menu"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="Settings" />
+    </group>
+</menu>

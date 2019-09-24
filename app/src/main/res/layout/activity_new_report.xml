@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.NewReport">
+
+    <TextView
+        android:id="@+id/text_projects"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Select Project"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner_projects"
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_projects" />
+
+    <EditText
+        android:id="@+id/edit_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Enter Title"
+        app:layout_constraintEnd_toEndOf="@+id/edit_managers_name"
+        app:layout_constraintStart_toStartOf="@+id/edit_managers_name"
+        app:layout_constraintTop_toBottomOf="@+id/edit_managers_name" />
+
+    <EditText
+        android:id="@+id/edit_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="Description"
+        app:layout_constraintEnd_toEndOf="@+id/btn_date"
+        app:layout_constraintStart_toStartOf="@+id/btn_date"
+        app:layout_constraintTop_toBottomOf="@+id/text_Display_Date" />
+
+    <Button
+        android:id="@+id/btn_save_report"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Save"
+        app:layout_constraintEnd_toEndOf="@+id/edit_description"
+        app:layout_constraintStart_toStartOf="@+id/edit_description"
+        app:layout_constraintTop_toBottomOf="@+id/edit_description" />
+
+    <Button
+        android:id="@+id/btn_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Select Date"
+        app:layout_constraintEnd_toEndOf="@+id/edit_title"
+        app:layout_constraintStart_toStartOf="@+id/edit_title"
+        app:layout_constraintTop_toBottomOf="@+id/edit_title" />
+
+    <TextView
+        android:id="@+id/text_Display_Date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/btn_date"
+        app:layout_constraintStart_toStartOf="@+id/btn_date"
+        app:layout_constraintTop_toBottomOf="@+id/btn_date" />
+
+    <EditText
+        android:id="@+id/edit_managers_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Managers Name"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_projects"
+        app:layout_constraintStart_toStartOf="@+id/spinner_projects"
+        app:layout_constraintTop_toBottomOf="@+id/text_projects" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

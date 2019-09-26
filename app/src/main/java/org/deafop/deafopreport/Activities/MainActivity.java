@@ -22,9 +22,7 @@ import com.google.firebase.auth.FirebaseUser;
 import org.deafop.deafopreport.R;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-   private ImageView imgNew;
-   private ImageView imgSaved;
-    private ImageView imgNewProject;
+   private ImageView imgNew,imgSaved, imgNewProject, imgReports ;
 
 
     private static final String TAG = "MainActivity";
@@ -44,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         imgNew = findViewById(R.id.image_new);
         imgSaved = findViewById(R.id.image_saved);
         imgNewProject = findViewById(R.id.image_new_project);
+        imgReports = findViewById(R.id.image_reports);
         imgNew.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,6 +64,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             public void onClick(View v) {
                 Intent NewReportIntent = new Intent(MainActivity.this, AddProject.class);
                 startActivity(NewReportIntent);
+            }
+        });
+        imgReports.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent AllReportintent = new Intent(MainActivity.this, ReportListActivity.class);
+                startActivity(AllReportintent);
+
+
             }
         });
 

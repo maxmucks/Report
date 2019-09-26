@@ -86,6 +86,7 @@ public class NewReport extends AppCompatActivity {
             ArrayAdapter<String> projectsAdapter = new ArrayAdapter<>(NewReport.this,
                     android.R.layout.simple_spinner_item, project);
             projectsAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            projectsAdapter.add("Select Project");
             spinProject.setAdapter(projectsAdapter);
         }
 
@@ -127,7 +128,11 @@ public class NewReport extends AppCompatActivity {
     }
 
     private void saveReport() {
+        if (spinProject.getSelectedItem() == "Select Project" ){
+            Toast.makeText(NewReport.this, "Please select a Project!",Toast.LENGTH_LONG).show();
 
+        }
+        else {
 
         String project = spinProject.getSelectedItem().toString();
         String manager = txtManagersName.getText().toString();
@@ -136,5 +141,6 @@ public class NewReport extends AppCompatActivity {
         String description = txtDescription.getText().toString();
         Report report = new Report(project, manager, title,date, description,"");
         mDatabaseReference.push().setValue(report);
+    }
     }
 }

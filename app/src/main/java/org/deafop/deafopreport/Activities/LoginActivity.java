@@ -92,7 +92,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        TextView register = (TextView) findViewById(R.id.link_register);
+        TextView register = findViewById(R.id.link_register);
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -101,7 +101,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        TextView resetPassword = (TextView) findViewById(R.id.forgot_password);
+        TextView resetPassword = findViewById(R.id.forgot_password);
         resetPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -110,7 +110,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        TextView resendEmailVerification = (TextView) findViewById(R.id.resend_verification_email);
+        TextView resendEmailVerification = findViewById(R.id.resend_verification_email);
         resendEmailVerification.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

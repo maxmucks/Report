@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2a54a4"
     tools:context=".Activities.NewReport">
 
     <TextView
@@ -36,8 +37,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
+        android:hint="@string/activity_name"
         android:inputType="textPersonName"
-        android:hint="Enter Title"
         app:layout_constraintEnd_toEndOf="@+id/edit_managers_name"
         app:layout_constraintStart_toStartOf="@+id/edit_managers_name"
         app:layout_constraintTop_toBottomOf="@+id/edit_managers_name" />
@@ -60,6 +61,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:background="#4f8033"
         android:text="Save"
         app:layout_constraintEnd_toEndOf="@+id/edit_description"
         app:layout_constraintStart_toStartOf="@+id/edit_description"
@@ -70,6 +72,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:background="#4f8033"
         android:text="Select Date"
         app:layout_constraintEnd_toEndOf="@+id/edit_title"
         app:layout_constraintStart_toStartOf="@+id/edit_title"
@@ -91,8 +94,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="Managers Name"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="@+id/spinner_projects"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/spinner_projects"

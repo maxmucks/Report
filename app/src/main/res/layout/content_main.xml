@@ -9,9 +9,9 @@
     <ImageView
         android:id="@+id/imageview_main"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="150dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="8dp"
         android:src="@drawable/main"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,7 +23,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="20dp"
@@ -52,7 +52,7 @@
                 android:id="@+id/image_new"
                 android:layout_width="63dp"
                 android:layout_height="69dp"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="52dp"
                 android:layout_marginTop="8dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text_daily_report"
@@ -62,30 +62,20 @@
                 android:id="@+id/image_saved"
                 android:layout_width="63dp"
                 android:layout_height="69dp"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                app:layout_constraintEnd_toStartOf="@+id/image_reports"
-                app:layout_constraintStart_toEndOf="@+id/image_new"
-                app:layout_constraintTop_toBottomOf="@+id/text_daily_report"
-                app:srcCompat="@drawable/ic_save_black_24dp" />
-
-            <ImageView
-                android:id="@+id/image_reports"
-                android:layout_width="63dp"
-                android:layout_height="69dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="52dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text_daily_report"
-                app:srcCompat="@drawable/ic_assignment_black_24dp" />
+                app:srcCompat="@drawable/ic_save_black_24dp" />
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
+                android:layout_marginBottom="8dp"
                 android:text="New"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/image_new"
                 app:layout_constraintStart_toStartOf="@+id/image_new"
                 app:layout_constraintTop_toBottomOf="@+id/image_new" />
@@ -95,20 +85,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
+                android:layout_marginBottom="8dp"
                 android:text="Saved"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/image_saved"
                 app:layout_constraintStart_toStartOf="@+id/image_saved"
                 app:layout_constraintTop_toBottomOf="@+id/image_saved" />
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:text="Reports"
-                app:layout_constraintEnd_toEndOf="@+id/image_reports"
-                app:layout_constraintStart_toStartOf="@+id/image_reports"
-                app:layout_constraintTop_toBottomOf="@+id/image_reports" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
@@ -117,7 +100,7 @@
         android:id="@+id/cardView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="24dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="20dp"
         app:layout_constraintEnd_toEndOf="@+id/cardView2"
@@ -166,10 +149,12 @@
                 android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="52dp"
                 android:layout_marginTop="2dp"
-                android:text="Employees"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginBottom="8dp"
+                android:text="Team"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/image_employees"
+                app:layout_constraintStart_toStartOf="@+id/image_employees"
                 app:layout_constraintTop_toBottomOf="@+id/image_employees" />
 
             <TextView
@@ -177,9 +162,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:layout_marginEnd="60dp"
-                android:text="Project"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="8dp"
+                android:text="Donor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/image_new_project"
+                app:layout_constraintStart_toStartOf="@+id/image_new_project"
                 app:layout_constraintTop_toBottomOf="@+id/image_new_project" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -188,7 +175,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="24dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="16dp"
         app:layout_constraintEnd_toEndOf="@id/cardView"
@@ -203,7 +190,7 @@
                 android:id="@+id/image_customize"
                 android:layout_width="63dp"
                 android:layout_height="69dp"
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="52dp"
                 android:layout_marginTop="8dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -211,12 +198,14 @@
 
             <TextView
                 android:id="@+id/textView6"
-                android:layout_width="63dp"
-                android:layout_height="69dp"
-                android:layout_marginStart="40dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:layout_marginTop="2dp"
+                android:layout_marginBottom="8dp"
                 android:text="Customize"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/image_customize"
+                app:layout_constraintStart_toStartOf="@+id/image_customize"
                 app:layout_constraintTop_toBottomOf="@+id/image_customize" />
 
             <ImageView
@@ -234,9 +223,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:layout_marginEnd="60dp"
+                android:layout_marginBottom="8dp"
                 android:text="Share"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/image_share"
+                app:layout_constraintStart_toStartOf="@+id/image_share"
                 app:layout_constraintTop_toBottomOf="@+id/image_share" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

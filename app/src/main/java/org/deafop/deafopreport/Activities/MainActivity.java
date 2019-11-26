@@ -3,7 +3,6 @@ package org.deafop.deafopreport.Activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -22,7 +21,7 @@ import com.google.firebase.auth.FirebaseUser;
 import org.deafop.deafopreport.R;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-   private ImageView imgNew,imgSaved, imgNewProject, imgReports ;
+   private ImageView imgNew,imgSaved, imgNewProject, imgTeam ;
 
 
     private static final String TAG = "MainActivity";
@@ -42,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         imgNew = findViewById(R.id.image_new);
         imgSaved = findViewById(R.id.image_saved);
         imgNewProject = findViewById(R.id.image_new_project);
-        imgReports = findViewById(R.id.image_reports);
+        imgTeam = findViewById(R.id.image_employees);
         imgNew.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,13 +65,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(NewReportIntent);
             }
         });
-        imgReports.setOnClickListener(new View.OnClickListener() {
+        imgTeam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent AllReportintent = new Intent(MainActivity.this, ReportListActivity.class);
-                startActivity(AllReportintent);
-
-
+                Intent TeamIntent = new Intent(MainActivity.this, TeamActivity.class);
+                startActivity(TeamIntent);
             }
         });
 

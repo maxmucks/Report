@@ -30,7 +30,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     private static final String TAG = "RegisterActivity";
 
-    private static final String DOMAIN_NAME = "gmail.com";
+  //  private static final String DOMAIN_NAME = "gmail.com";
 
     //widgets
     private EditText mEmail, mPassword, mConfirmPassword;
@@ -58,7 +58,7 @@ public class RegisterActivity extends AppCompatActivity {
                         && !isEmpty(mConfirmPassword.getText().toString())){
 
                     //check if user has a company email address
-                    if(isValidDomain(mEmail.getText().toString())){
+                  //  if(isValidDomain(mEmail.getText().toString())){
 
                         //check if passwords match
                         if(doStringsMatch(mPassword.getText().toString(), mConfirmPassword.getText().toString())){
@@ -68,9 +68,9 @@ public class RegisterActivity extends AppCompatActivity {
                         }else{
                             Toast.makeText(RegisterActivity.this, "Passwords do not Match", Toast.LENGTH_SHORT).show();
                         }
-                    }else{
-                        Toast.makeText(RegisterActivity.this, "Please Register with Company Email", Toast.LENGTH_SHORT).show();
-                    }
+                  //  }else{
+                  //      Toast.makeText(RegisterActivity.this, "Please Register with Company Email", Toast.LENGTH_SHORT).show();
+                  //  }
 
                 }else{
                     Toast.makeText(RegisterActivity.this, "You must fill out all the fields", Toast.LENGTH_SHORT).show();
@@ -170,16 +170,18 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     /**
-     * Returns True if the user's email contains '@tabian.ca'
+     * Returns True if the user's email contains '@gmail.com'
      * @param email
      * @return
      */
-    private boolean isValidDomain(String email){
+  /*  private boolean isValidDomain(String email){
         Log.d(TAG, "isValidDomain: verifying email has correct domain: " + email);
         String domain = email.substring(email.indexOf("@") + 1).toLowerCase();
         Log.d(TAG, "isValidDomain: users domain: " + domain);
         return domain.equals(DOMAIN_NAME);
     }
+
+   */
 
     /**
      * Redirects the user to the login screen

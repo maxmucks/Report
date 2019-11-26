@@ -63,7 +63,6 @@ public class NewReport extends AppCompatActivity {
              public void onClick(View v) {
                  DatePickerFragment mDatePicker = new DatePickerFragment();
                  mDatePicker.show(getSupportFragmentManager(),"Select Date");
-                // mDatePicker.show(getFragmentManager(), "Select date");
 
              }
          });
@@ -86,8 +85,8 @@ public class NewReport extends AppCompatActivity {
             ArrayAdapter<String> projectsAdapter = new ArrayAdapter<>(NewReport.this,
                     android.R.layout.simple_spinner_item, project);
             projectsAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            projectsAdapter.add("Select Project");
             spinProject.setAdapter(projectsAdapter);
+            spinProject.setSelection(2);
         }
 
         @Override
@@ -128,8 +127,12 @@ public class NewReport extends AppCompatActivity {
     }
 
     private void saveReport() {
-        if (spinProject.getSelectedItem() == "Select Project" ){
-            Toast.makeText(NewReport.this, "Please select a Project!",Toast.LENGTH_LONG).show();
+        if (spinProject.getSelectedItem() == "Select a Donor" ){
+            Toast.makeText(NewReport.this, "Please select a Donor!",Toast.LENGTH_LONG).show();
+
+        }
+       else if (txtTitle.getText().toString().equals("")){
+            Toast.makeText(NewReport.this, "Please Enter The Activity name!",Toast.LENGTH_LONG).show();
 
         }
         else {

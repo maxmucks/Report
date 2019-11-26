@@ -21,10 +21,10 @@
     <string name="cancel">Cancel</string>
 
 
-
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="nav_header_title">Deafop Report</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="activity_name">Activity Name</string>
 </resources>

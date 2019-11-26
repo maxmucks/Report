@@ -1,12 +1,10 @@
-package org.deafop.deafopreport;
+package org.deafop.deafopreport.models;
 
 import android.content.Context;
-import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -19,30 +17,33 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import org.deafop.deafopreport.Activities.ReportActivity;
+
+import org.deafop.deafopreport.R;
+import org.deafop.deafopreport.ReportUtil;
 
 import java.util.ArrayList;
 
-public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ViewHolder> {
-    ArrayList<Report> repot;
+public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.ViewHolder> {
+    ArrayList<User> team;
     private FirebaseDatabase mFirebaseDatabase;
     private DatabaseReference mDatabaseReference;
     private ChildEventListener mChildListener;
-    public ReportAdapter(){
+
+    public TeamAdapter() {
 
         mFirebaseDatabase = ReportUtil.mFirebaseDatabase;
         mDatabaseReference = ReportUtil.mDatabaseReference;
-        this.repot = ReportUtil.mRepot;
-        repot.clear();
+        this.team = ReportUtil.mTeam;
+        team.clear();
         mChildListener = new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
 
-                Report rp = dataSnapshot.getValue(Report.class);
-                rp.setId(dataSnapshot.getKey());
-                Log.d("Report:", rp.getTitle());
-                repot.add(rp);
-                notifyItemInserted(repot.size()-1);
+               User tm = dataSnapshot.getValue(User.class);
+                tm.setUser_id(dataSnapshot.getKey());
+                Log.d("User:", tm.getName());
+                team.add(tm);
+                notifyItemInserted(team.size()-1);
             }
 
             @Override
@@ -66,57 +67,48 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ViewHolder
             }
         };
         mDatabaseReference.addChildEventListener(mChildListener);
+
     }
+
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public TeamAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         Context context = parent.getContext();
         View itemView = LayoutInflater.from(context)
-                .inflate(R.layout.rv_row, parent, false);
-        return new ViewHolder(itemView);
+                .inflate(R.layout.tm_row, parent, false);
+        return new TeamAdapter.ViewHolder(itemView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Report report = repot.get(position);
-        holder.Bind(report);
+    public void onBindViewHolder(@NonNull TeamAdapter.ViewHolder holder, int position) {
+        User teams = team.get(position);
+        holder.Bind(teams);
 
     }
 
     @Override
     public int getItemCount() {
-        return repot.size();
+        return team.size();
     }
+
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        TextView rpTitle,rpDate,rpManagerName;
-        ImageView rpReportShare;
+        TextView tmName, tmPhone;
 
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            rpTitle = itemView.findViewById(R.id.text_title);
-            rpDate = itemView.findViewById(R.id.text_date);
-            rpManagerName = itemView.findViewById(R.id.text_manager_name);
-            rpReportShare = itemView.findViewById(R.id.img_report_share);
+            tmName = itemView.findViewById(R.id.text_tm_name);
+         //   tmPhone = itemView.findViewById(R.id.text_date);
             itemView.setOnClickListener(this);
         }
 
-        public void Bind(Report report) {
-            rpTitle.setText(report.getTitle());
-            rpDate.setText(report.getDate());
-            rpManagerName.setText(report.getManager());
-           String share = report.getTitle() + report.getDate() + report.getDescription();
+        public void Bind(User teams) {
+            tmName.setText(teams.getName());
         }
-      //  public String share = repo
 
         @Override
         public void onClick(View v) {
-            int position = getAdapterPosition();
-            Log.d("Click", String.valueOf(position));
-            Report selectedReport = repot.get(position);
-            Intent intent = new Intent(v.getContext(), ReportActivity.class);
-            intent.putExtra("Report", selectedReport);
-            v.getContext().startActivity(intent);
+
         }
     }
 }

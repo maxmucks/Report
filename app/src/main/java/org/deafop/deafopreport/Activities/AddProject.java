@@ -24,8 +24,8 @@ public class AddProject extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_project);
-        newProject = findViewById(R.id.edit_project_name);
-        btnSaveProject = findViewById(R.id.btn_project_save);
+        newProject = findViewById(R.id.edit_donor_name);
+        btnSaveProject = findViewById(R.id.btn_donor_save);
         ReportUtil.openFBReference("projects");
         mFirebaseDatabase = ReportUtil.mFirebaseDatabase;
         mDatabaseReference = ReportUtil.mDatabaseReference;

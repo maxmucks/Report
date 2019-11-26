@@ -28,10 +28,12 @@
             <EditText
                 android:id="@+id/email"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_marginTop="20dp"
                 android:hint="@string/prompt_email"
+                android:background="@drawable/editext_background"
                 android:inputType="textEmailAddress"
+                android:drawableStart="@drawable/email_ic"
                 android:maxLines="1"/>
 
 
@@ -39,11 +41,13 @@
             <EditText
                 android:id="@+id/password"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:hint="@string/password"
                 android:layout_marginTop="20dp"
+                android:background="@drawable/editext_background"
                 android:imeOptions="actionUnspecified"
                 android:inputType="textPassword"
+                android:drawableStart="@drawable/key_ic"
                 android:maxLines="1"
                 />
 
@@ -55,7 +59,7 @@
                 android:layout_marginTop="30dp"
                 android:text="@string/sign_in"
                 android:textStyle="bold"
-                android:background="@drawable/blue_button"/>
+                android:background="@drawable/button_background"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"

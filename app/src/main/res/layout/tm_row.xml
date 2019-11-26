@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="60dp"
-    android:background="#2196F3">
+    android:background="#CFD8DC">
 
     <androidx.cardview.widget.CardView
         android:layout_width="409dp"
@@ -18,9 +18,10 @@
 
         <TextView
             android:id="@+id/text_tm_name"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="24sp"
+            android:layout_margin="5dp"
             tools:text="User Name" />
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

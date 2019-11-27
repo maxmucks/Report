@@ -47,7 +47,6 @@ public class ReportActivity extends AppCompatActivity {
 
 
     public static final String SHARE_DESCRIPTION = "Look at this report from ";
-    public static final String HASHTAG_DEAFOPREPORT = " #Deafop";
     String mReportUrl = "";
 
     @Override
@@ -89,7 +88,9 @@ public class ReportActivity extends AppCompatActivity {
 
                 Intent shareIntent = new Intent(Intent.ACTION_SEND);
                 shareIntent.setType("text/plain");
-                String shareMsg = SHARE_DESCRIPTION + finalReport.getManager() + "  Project: " + finalReport.getProject() +  "  Title:  " + finalReport.getTitle() +  " Date:  " + finalReport.getDate()+ "  Description  " + finalReport.getDescription() ;
+                String shareMsg = SHARE_DESCRIPTION + finalReport.getManager() + "  Project: " + finalReport.getProject() +
+                        "  Title:  " + finalReport.getTitle() +  " Date:  " + finalReport.getDate()+ "  Description:  " +
+                        finalReport.getDescription() ;
                 shareIntent.putExtra(Intent.EXTRA_TEXT,shareMsg );
                 startActivity(shareIntent);
             }

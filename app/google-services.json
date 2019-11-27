@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "813786387448",
+    "firebase_url": "https://daily-report-afaa3.firebaseio.com",
+    "project_id": "daily-report-afaa3",
+    "storage_bucket": "daily-report-afaa3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:813786387448:android:721a2a78fdfc2f1f",
+        "android_client_info": {
+          "package_name": "org.deafop.deafopreport"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "813786387448-5bjmtuertj81dfiqbemevob0rn9464fa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.deafop.deafopreport",
+            "certificate_hash": "41425194a9f513efccece312531c53831c52d713"
+          }
+        },
+        {
+          "client_id": "813786387448-c7e4h7othe5gf5u6tffp9abcfkgfosdu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0jO-ijMYy1NXFE29frzIzjX4lqvijFbE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "813786387448-c7e4h7othe5gf5u6tffp9abcfkgfosdu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

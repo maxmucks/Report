@@ -135,6 +135,14 @@ public class NewReport extends AppCompatActivity {
             Toast.makeText(NewReport.this, "Please Enter The Activity name!",Toast.LENGTH_LONG).show();
 
         }
+        else if (txtDescription.getText().toString().equals("")){
+            Toast.makeText(NewReport.this, "Please Enter The Description!",Toast.LENGTH_LONG).show();
+
+        }
+        else if (text_DisplayDate.getText().toString().equals("")){
+            Toast.makeText(NewReport.this, "Please Enter The Date!",Toast.LENGTH_LONG).show();
+
+        }
         else {
 
         String project = spinProject.getSelectedItem().toString();

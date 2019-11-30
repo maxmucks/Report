@@ -107,7 +107,6 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ViewHolder
             rpManagerName.setText(report.getManager());
            String share = report.getTitle() + report.getDate() + report.getDescription();
         }
-      //  public String share = repo
 
         @Override
         public void onClick(View v) {

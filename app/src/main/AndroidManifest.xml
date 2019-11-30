@@ -12,31 +12,37 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.TeamActivity"></activity>
-        <activity
-            android:name=".Activities.ReportActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity
-            android:name=".Activities.AddProject"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity
-            android:name=".Activities.ReportListActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".Activities.AddUser" />
-        <activity
-            android:name=".Activities.NewReport"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".Activities.RegisterActivity" />
-        <activity
-            android:name=".Activities.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".Activities.LoginActivity">
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Activities.TeamActivity" />
+        <activity
+            android:name=".Activities.ReportActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.AddProject"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.ReportListActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activities.AddUser" />
+        <activity
+            android:name=".Activities.NewReport"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activities.RegisterActivity" />
+        <activity
+            android:name=".Activities.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activities.LoginActivity">
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

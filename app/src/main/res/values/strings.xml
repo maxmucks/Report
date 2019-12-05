@@ -27,6 +27,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="activity_name">Activity Name</string>
-    <string name="welcome_to_report_app">Welcome To Report App</string>
+    <string name="welcome_to_report_app">Deafop Reporting</string>
     <string name="logo">logo</string>
+    <string name="create_new_report">Create New Report</string>
 </resources>

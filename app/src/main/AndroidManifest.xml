@@ -11,8 +11,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".SplashScreen">
+        android:theme="@style/AppTheme"
+        android:hardwareAccelerated="false">
+        <activity android:name=".SplashScreen"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,14 +27,14 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Activities.AddProject"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="Add Project"/>
         <activity
             android:name=".Activities.ReportListActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Activities.AddUser" />
         <activity
             android:name=".Activities.NewReport"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="@string/create_new_report"/>
         <activity android:name=".Activities.RegisterActivity" />
         <activity
             android:name=".Activities.MainActivity"
@@ -40,7 +42,7 @@
         <activity android:name=".Activities.LoginActivity">
         </activity>
 
-        <meta-data
+       <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>

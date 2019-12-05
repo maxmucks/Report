@@ -24,6 +24,7 @@ import com.google.firebase.database.ValueEventListener;
 import org.deafop.deafopreport.R;
 import org.deafop.deafopreport.Report;
 import org.deafop.deafopreport.ReportUtil;
+import org.deafop.deafopreport.models.InternetDialog;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -45,6 +46,12 @@ public class NewReport extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_report);
+
+        // CALL getInternetStatus() function to check for internet and display error dialog
+        if(new InternetDialog(this).getInternetStatus()){
+            Toast.makeText(this, "INTERNET VALIDATION PASSED", Toast.LENGTH_SHORT).show();
+
+        }
         // Write a message to the database
         ReportUtil.openFBReference("report");
         mFirebaseDatabase = ReportUtil.mFirebaseDatabase;
@@ -95,14 +102,13 @@ public class NewReport extends AppCompatActivity {
         }
     });
 
-
          btn_Save.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
                  saveReport();
                  Toast.makeText(NewReport.this, "Report Saved", Toast.LENGTH_LONG).show();
                  clean();
-                 return; 
+                 return;
              }
          });
     }

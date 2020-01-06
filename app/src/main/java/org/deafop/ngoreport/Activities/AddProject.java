@@ -1,4 +1,4 @@
-package org.deafop.deafopreport.Activities;
+package org.deafop.ngoreport.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,8 +11,8 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import org.deafop.deafopreport.R;
-import org.deafop.deafopreport.ReportUtil;
+import org.deafop.ngoreport.R;
+import org.deafop.ngoreport.ReportUtil;
 
 public class AddProject extends AppCompatActivity {
     public FirebaseDatabase mFirebaseDatabase;

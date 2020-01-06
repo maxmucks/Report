@@ -1,4 +1,4 @@
-package org.deafop.deafopreport;
+package org.deafop.ngoreport;
 
 import android.content.Context;
 import android.content.Intent;
@@ -19,7 +19,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import org.deafop.deafopreport.Activities.ReportActivity;
+import org.deafop.ngoreport.Activities.ReportActivity;
 
 import java.util.ArrayList;
 
@@ -97,7 +97,6 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ViewHolder
             rpTitle = itemView.findViewById(R.id.text_title);
             rpDate = itemView.findViewById(R.id.text_date);
             rpManagerName = itemView.findViewById(R.id.text_manager_name);
-            rpReportShare = itemView.findViewById(R.id.img_report_share);
             itemView.setOnClickListener(this);
         }
 

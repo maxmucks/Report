@@ -20,16 +20,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />-->
 
-    <Spinner
-        android:id="@+id/spinner_projects"
-        android:layout_width="395dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+   <Spinner
+       android:id="@+id/spinner_projects"
+       android:layout_width="350dp"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="32dp"
+       android:layout_marginTop="32dp"
+       android:layout_marginEnd="32dp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/edit_title"
@@ -46,21 +46,21 @@
         app:layout_constraintStart_toStartOf="@+id/edit_managers_name"
         app:layout_constraintTop_toBottomOf="@+id/edit_managers_name" />
 
-    <EditText
-        android:id="@+id/edit_description"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:gravity="center_vertical"
-        android:hint="Description"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"
-        android:background="@drawable/editext_background"
-        android:inputType="textMultiLine"
-        app:layout_constraintEnd_toEndOf="@+id/btn_date"
-        app:layout_constraintStart_toStartOf="@+id/btn_date"
-        app:layout_constraintTop_toBottomOf="@+id/text_Display_Date" />
+   <EditText
+       android:id="@+id/edit_description"
+       android:layout_width="0dp"
+       android:layout_height="48dp"
+       android:layout_marginTop="24dp"
+       android:background="@drawable/editext_background"
+       android:ems="10"
+       android:gravity="center_vertical"
+       android:hint="Description"
+       android:inputType="textMultiLine"
+       android:paddingStart="10dp"
+       android:paddingEnd="10dp"
+       app:layout_constraintEnd_toEndOf="@+id/btn_date"
+       app:layout_constraintStart_toStartOf="@+id/btn_date"
+       app:layout_constraintTop_toBottomOf="@+id/btn_date" />
 
     <Button
         android:id="@+id/btn_save_report"
@@ -73,28 +73,24 @@
         app:layout_constraintStart_toStartOf="@+id/edit_description"
         app:layout_constraintTop_toBottomOf="@+id/edit_description" />
 
-    <Button
+    <EditText
         android:id="@+id/btn_date"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginTop="24dp"
-        android:background="@drawable/button_background"
-        android:text="Select Date"
+        android:ems="10"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:background="@drawable/editext_background"
+        android:clickable="true"
+        android:focusable="false"
+        android:cursorVisible="false"
+        android:hint="Select Date"
         app:layout_constraintEnd_toEndOf="@+id/edit_title"
         app:layout_constraintStart_toStartOf="@+id/edit_title"
         app:layout_constraintTop_toBottomOf="@+id/edit_title" />
 
-    <TextView
-        android:id="@+id/text_Display_Date"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toEndOf="@+id/btn_date"
-        app:layout_constraintStart_toStartOf="@+id/btn_date"
-        app:layout_constraintTop_toBottomOf="@+id/btn_date" />
-
-    <EditText
+   <EditText
         android:id="@+id/edit_managers_name"
         android:layout_width="0dp"
         android:layout_height="48dp"

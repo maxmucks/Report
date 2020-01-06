@@ -1,4 +1,4 @@
-package org.deafop.deafopreport;
+package org.deafop.ngoreport;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,7 +9,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.deafop.deafopreport.Activities.LoginActivity;
+import org.deafop.ngoreport.Activities.LoginActivity;
 
 public class SplashScreen extends AppCompatActivity {
 

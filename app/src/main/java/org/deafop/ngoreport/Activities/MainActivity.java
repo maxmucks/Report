@@ -1,4 +1,4 @@
-package org.deafop.deafopreport.Activities;
+package org.deafop.ngoreport.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,7 +18,7 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-import org.deafop.deafopreport.R;
+import org.deafop.ngoreport.R;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
    private ImageView imgNew,imgSaved, imgNewProject, imgTeam ;

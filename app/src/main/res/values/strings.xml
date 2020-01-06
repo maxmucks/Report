@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Deafop Report</string>
+    <string name="app_name">NGO Report</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -23,11 +23,12 @@
 
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="nav_header_title">Deafop Report</string>
+    <string name="nav_header_title">NGO Report</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="activity_name">Activity Name</string>
-    <string name="welcome_to_report_app">Deafop Reporting</string>
+    <string name="welcome_to_report_app">NGO Reporting</string>
     <string name="logo">logo</string>
     <string name="create_new_report">Create New Report</string>
+    <string name="add_project">Add Project</string>
 </resources>

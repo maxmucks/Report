@@ -1,4 +1,4 @@
-package org.deafop.deafopreport.models;
+package org.deafop.ngoreport.models;
 
 import android.content.Context;
 import android.util.Log;
@@ -18,8 +18,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 
-import org.deafop.deafopreport.R;
-import org.deafop.deafopreport.ReportUtil;
+import org.deafop.ngoreport.R;
+import org.deafop.ngoreport.ReportUtil;
 
 import java.util.ArrayList;
 

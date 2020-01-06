@@ -1,10 +1,10 @@
-package org.deafop.deafopreport;
+package org.deafop.ngoreport;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import org.deafop.deafopreport.models.User;
+import org.deafop.ngoreport.models.User;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package org.deafop.deafopreport.models;
+package org.deafop.ngoreport.models;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -7,8 +7,8 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.view.View;
 
-import org.deafop.deafopreport.Activities.MainActivity;
-import org.deafop.deafopreport.R;
+import org.deafop.ngoreport.Activities.MainActivity;
+import org.deafop.ngoreport.R;
 
 public class InternetDialog {
     private Context context;

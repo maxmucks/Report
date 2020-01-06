@@ -1,4 +1,4 @@
-package org.deafop.deafopreport;
+package org.deafop.ngoreport;
 
 import android.content.Context;
 import androidx.test.InstrumentationRegistry;

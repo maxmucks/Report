@@ -1,4 +1,4 @@
-package org.deafop.deafopreport.Activities;
+package org.deafop.ngoreport.Activities;
 
 
 import android.app.Dialog;
@@ -25,7 +25,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-import org.deafop.deafopreport.R;
+import org.deafop.ngoreport.R;
 
 
 public class LoginActivity extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package org.deafop.deafopreport.Activities;
+package org.deafop.ngoreport.Activities;
 
 import android.os.Bundle;
 import android.widget.Toast;
@@ -10,10 +10,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import org.deafop.deafopreport.R;
-import org.deafop.deafopreport.ReportAdapter;
-import org.deafop.deafopreport.ReportUtil;
-import org.deafop.deafopreport.models.InternetDialog;
+import org.deafop.ngoreport.R;
+import org.deafop.ngoreport.ReportAdapter;
+import org.deafop.ngoreport.ReportUtil;
+import org.deafop.ngoreport.models.InternetDialog;
 
 public class ReportListActivity extends AppCompatActivity {
     public FirebaseDatabase mFirebaseDatabase;

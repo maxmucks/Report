@@ -1,4 +1,4 @@
-package org.deafop.deafopreport.Activities;
+package org.deafop.ngoreport.Activities;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -18,7 +18,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 
-import org.deafop.deafopreport.R;
+import org.deafop.ngoreport.R;
 
 
 public class PasswordResetDialog extends DialogFragment {

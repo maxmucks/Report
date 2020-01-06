@@ -1,10 +1,10 @@
-package org.deafop.deafopreport.Activities;
+package org.deafop.ngoreport.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import org.deafop.deafopreport.R;
+import org.deafop.ngoreport.R;
 
 public class AddUser extends AppCompatActivity {
 

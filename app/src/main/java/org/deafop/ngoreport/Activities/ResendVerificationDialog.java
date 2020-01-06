@@ -1,4 +1,4 @@
-package org.deafop.deafopreport.Activities;
+package org.deafop.ngoreport.Activities;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -23,7 +23,7 @@ import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-import org.deafop.deafopreport.R;
+import org.deafop.ngoreport.R;
 
 
 public class ResendVerificationDialog extends DialogFragment {

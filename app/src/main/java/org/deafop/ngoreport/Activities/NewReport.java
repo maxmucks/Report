@@ -1,4 +1,4 @@
-package org.deafop.deafopreport.Activities;
+package org.deafop.ngoreport.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
@@ -12,7 +12,6 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -21,10 +20,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import org.deafop.deafopreport.R;
-import org.deafop.deafopreport.Report;
-import org.deafop.deafopreport.ReportUtil;
-import org.deafop.deafopreport.models.InternetDialog;
+import org.deafop.ngoreport.R;
+import org.deafop.ngoreport.Report;
+import org.deafop.ngoreport.ReportUtil;
+import org.deafop.ngoreport.models.InternetDialog;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -37,8 +36,8 @@ public class NewReport extends AppCompatActivity {
     public DatabaseReference mProjectReference;
     Spinner spinProject;
     EditText txtTitle, txtDescription, txtManagersName;
-    Button btn_Save, btn_date;
-    protected static TextView text_DisplayDate;
+    protected static EditText btn_date;
+    Button btn_Save;
 
 
 
@@ -62,7 +61,6 @@ public class NewReport extends AppCompatActivity {
          txtManagersName = findViewById(R.id.edit_managers_name);
 
          btn_Save = findViewById(R.id.btn_save_report);
-         text_DisplayDate = findViewById(R.id.text_Display_Date);
          btn_date = findViewById(R.id.btn_date);
          assert btn_date !=null;
          btn_date.setOnClickListener(new View.OnClickListener() {
@@ -113,6 +111,8 @@ public class NewReport extends AppCompatActivity {
          });
     }
     public static class DatePickerFragment extends DialogFragment implements DatePickerDialog.OnDateSetListener {
+
+
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
             final Calendar c = Calendar.getInstance();
@@ -122,7 +122,7 @@ public class NewReport extends AppCompatActivity {
             return new DatePickerDialog(getActivity(), this, year, month, day);
         }
         public void onDateSet(DatePicker view, int year, int month, int day) {
-            text_DisplayDate.setText( String.valueOf(year) + " - " + String.valueOf(month) + " - " + String.valueOf(day));
+            btn_date.setText( String.valueOf(year) + " - " + String.valueOf(month + 1) + " - " + String.valueOf(day));
         }
     }
     private void clean() {
@@ -145,7 +145,7 @@ public class NewReport extends AppCompatActivity {
             Toast.makeText(NewReport.this, "Please Enter The Description!",Toast.LENGTH_LONG).show();
 
         }
-        else if (text_DisplayDate.getText().toString().equals("")){
+        else if (btn_date.getText().toString().equals("")){
             Toast.makeText(NewReport.this, "Please Enter The Date!",Toast.LENGTH_LONG).show();
 
         }
@@ -154,7 +154,7 @@ public class NewReport extends AppCompatActivity {
         String project = spinProject.getSelectedItem().toString();
         String manager = txtManagersName.getText().toString();
         String title = txtTitle.getText().toString();
-        String date = text_DisplayDate.getText().toString();
+        String date = btn_date.getText().toString();
         String description = txtDescription.getText().toString();
         Report report = new Report(project, manager, title,date, description,"");
         mDatabaseReference.push().setValue(report);

@@ -1,4 +1,4 @@
-package org.deafop.deafopreport.Activities;
+package org.deafop.ngoreport.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,8 +22,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 
-import org.deafop.deafopreport.R;
-import org.deafop.deafopreport.models.User;
+import org.deafop.ngoreport.R;
+import org.deafop.ngoreport.models.User;
 
 
 public class RegisterActivity extends AppCompatActivity {

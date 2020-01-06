@@ -1,4 +1,4 @@
-package org.deafop.deafopreport;
+package org.deafop.ngoreport;
 
 import org.junit.Test;
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.deafop.deafopreport">
+    package="org.deafop.ngoreport">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -13,33 +13,36 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:hardwareAccelerated="false">
-        <activity android:name=".SplashScreen"
+        <activity android:name="org.deafop.ngoreport.SplashScreen"
             android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name="org.deafop.ngoreport.Activities.TeamActivity" />
+        <activity
+            android:name="org.deafop.ngoreport.Activities.ReportActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="org.deafop.ngoreport.Activities.AddProject"
+            android:label="@string/add_project"/>
+        <activity
+            android:name="org.deafop.ngoreport.Activities.ReportListActivity" />
+        <activity android:name="org.deafop.ngoreport.Activities.AddUser" />
+        <activity
+            android:name="org.deafop.ngoreport.Activities.NewReport"
+            android:label="@string/create_new_report"/>
+        <activity android:name="org.deafop.ngoreport.Activities.RegisterActivity" />
+        <activity
+            android:name="org.deafop.ngoreport.Activities.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="org.deafop.ngoreport.Activities.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".Activities.TeamActivity" />
-        <activity
-            android:name=".Activities.ReportActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Activities.AddProject"
-            android:label="Add Project"/>
-        <activity
-            android:name=".Activities.ReportListActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Activities.AddUser" />
-        <activity
-            android:name=".Activities.NewReport"
-            android:label="@string/create_new_report"/>
-        <activity android:name=".Activities.RegisterActivity" />
-        <activity
-            android:name=".Activities.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Activities.LoginActivity">
         </activity>
 
        <meta-data

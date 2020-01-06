@@ -1,4 +1,4 @@
-package org.deafop.deafopreport.models;
+package org.deafop.ngoreport.models;
 
 
 public class User {

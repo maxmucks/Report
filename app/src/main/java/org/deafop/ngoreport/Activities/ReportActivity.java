@@ -1,4 +1,4 @@
-package org.deafop.deafopreport.Activities;
+package org.deafop.ngoreport.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -13,6 +13,7 @@ import android.graphics.Paint;
 import android.graphics.pdf.PdfDocument;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
@@ -24,9 +25,9 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import org.deafop.deafopreport.R;
-import org.deafop.deafopreport.Report;
-import org.deafop.deafopreport.ReportUtil;
+import org.deafop.ngoreport.R;
+import org.deafop.ngoreport.Report;
+import org.deafop.ngoreport.ReportUtil;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -62,6 +63,7 @@ public class ReportActivity extends AppCompatActivity {
         textTVDescription = findViewById(R.id.textTVDescription);
         textTVProject = findViewById(R.id.textTVProject);
         textTVTitle = findViewById(R.id.textTVtitle);
+        textTVDescription.setMovementMethod(new ScrollingMovementMethod());
         Intent intent = getIntent();
         Report report = (Report) intent.getSerializableExtra("Report");
         if (report==null){
